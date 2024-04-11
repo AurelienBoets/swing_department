@@ -69,6 +69,11 @@ public class SalaryController extends JFrame {
             }
         });
 
+        switchButton.addActionListener(e->{
+            dispose();
+            new DepartmentController();
+        });
+
         buttonPanel.add(addButton);
         buttonPanel.add(editButton);
         buttonPanel.add(deleteButton);
