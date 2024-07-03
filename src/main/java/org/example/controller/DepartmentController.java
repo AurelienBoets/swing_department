@@ -56,12 +56,12 @@ public class DepartmentController extends JFrame {
             }
         });
 
-       deleteButton.addActionListener(e-> {
-           if(departmentSelection!=null){
-               Department department=departments.get(departmentSelection);
-               removeDepartment(department);
-           }
-       });
+        deleteButton.addActionListener(e -> {
+            if (departmentSelection != null) {
+                Department department = departments.get(departmentSelection);
+                removeDepartment(department);
+            }
+        });
 
         switchButton.addActionListener(e -> switchFrame());
 
@@ -91,8 +91,8 @@ public class DepartmentController extends JFrame {
 
     }
 
-    private void removeDepartment(Department department){
-        dao.remove(department.getId());
+    private void removeDepartment(Department department) {
         model.removeElement(department.toString());
+        dao.remove(department.getId());
     }
 }
